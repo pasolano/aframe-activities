@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    </head>
+    <body>
+        <a-scene>
+            <!-- Space -->
+            <a-sky color="#1C1C1C"></a-sky>
+            <!-- The Sun -->
+            <a-sphere color="#FFFB45"
+                      position="0 1.5 -4"
+                      radius="1"
+                      animation=""
+                <!-- The Earth -->
+                <a-sphere color="#17BB4E"
+                          position="2 0 0"
+                          radius="0.2"
+                          animation="">
+                    <!-- The Moon -->
+                    <a-sphere color="#BADCDA"
+                              position="0.3 0 0"
+                              radius="0.05"></a-sphere>
+                </a-sphere>
+            </a-sphere>
+            <!-- EXTRA: The Sun Light Source -->
+            <a-light position="0 3 -4"
+                     type="ambient"
+                     intensity="1"></a-light>
+            <!-- Shooting Star -->
+            <a-dodecahedron color="#59FFF5"
+                            position="3 3 -2"
+                            radius="0.1"
+                            animation__1=""
+                            animation__2="">
+            </a-dodecahedron>
+        </a-scene>
+    </body>
+</html>
