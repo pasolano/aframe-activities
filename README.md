@@ -2,4 +2,4 @@
 Here you can find activities that will help learn how to code WebVR environments using HTML and A-Frame.
 You can simply download the whole repository locally or download each file separately from the github website.
 
-In this project, we go over physics, animations, network setup, objects, and basic syntax of HTML and A-Frame.
+In this project, we go over physics, animations, network setup, objects, and basic syntax of HTML and A-Frame. In the future, we will learn how to add Leap Motion Controller functionality to A-Frame.
