@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script> <!-- Older A-Frame version allows physics to work -->
+    <script src="http://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script> <!-- A-Frame Physics system that works with Leap Hands and objects -->
+  </head>
+  <body>
+    <a-scene>
+      <!-- 1. Ground -->
+      <a-plane position="0 -0.5 -4" height="10" width="10" rotation="-90 0 0" color="#57B94D"></a-plane>
+      <!-- 2. Moveable Box -->
+      <a-box position="-0.4 2 -0.5" color="#F38128" scale="0.6 0.6 0.6"></a-box>
+      <!-- 3. Immovable Cylinder -->
+      <a-cylinder position="0.4 -0.25 -0.5" color="#283AF3" radius="0.25" height="0.3"></a-cylinder>
+      <!-- 4. Spring System -->
+      <a-box position="0 3 -3" color="#676B92" scale="0.25 0.25 0.25"></a-box>
+      <a-dodecahedron position="0 2 -3" color="#252B64" dynamic-body scale="0.25 0.25 0.25"></a-dodecahedron>
+      <!-- 5. EXTRA: Leap Motion Controller Hands -->
+      <a-entity camera="near: 0.01" look-controls></a-entity>
+    </a-scene>
+  </body>
+</html>
