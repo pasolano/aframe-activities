@@ -5,38 +5,44 @@
     <script src="http://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
   </head>
   <body>
-    <a-scene>
+    <a-scene physics="driver: ammo">
       <!-- Static Ground Layer 1-->
       <a-plane rotation="-80 -90 0"
                position="0 1.5 -4"
                color="#0CC571"
                scale="4 4 1"
-               ammo-body=""
-               ammo-shape="">
+               ammo-body="collisionFilterMask: 1; type: static"
+               ammo-shape="type: box">
       </a-plane>
       <!-- Static Ground Layer 2 -->
       <a-plane rotation="-90 0 0"
                position="0 0 -4"
                color="#08DAF1"
                scale="4 4 1"
-               ammo-body=""
-               ammo-shape="">
+               ammo-body="collisionFilterMask: 2; type: static"
+               ammo-shape="type: box">
       </a-plane>
       <!-- Dynamic Sphere Layer 1 -->
       <a-sphere position="-1 3 -4"
                 color="#E48C29"
-                ammo-body="collisionFilterGroup: 1;"
-                radius="0.5">
+                ammo-body="collisionFilterGroup: 1; type: dynamic"
+                radius="0.5"
+                ammo-shape="type: sphere">
       </a-sphere>
       <!-- Dynamic Sphere Layer 2 -->
       <a-sphere position="1 3 -4"
                 color="#E48C29"
-                ammo-body="collisionFilterGroup: 2;"
-                radius="0.5">
+                ammo-body="collisionFilterGroup: 2; type: dynamic; gravity: 0 -1.63 0"
+                radius="0.5"
+                ammo-shape="type: sphere">
       </a-sphere>
       <!-- Kinematic Cube Layer 2 -->
       <a-box position="-3 0.5 -4"
-              color="#2525E0">
+              color="#2525E0"
+              ammo-body="collisionFilterMask: 2; type: kinematic"
+              ammo-shape="type: box"
+              velocity="1 0 0"
+              >
       </a-box>
     </a-scene>
   </body>
