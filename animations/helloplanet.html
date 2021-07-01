@@ -10,12 +10,12 @@
             <a-sphere color="#FFFB45"
                       position="0 1.5 -4"
                       radius="1"
-                      animation=""
+                      animation="property: rotation; from: 0 0 0; to: 0 360 0; dur: 16000; loop: true; easing: linear">
                 <!-- The Earth -->
                 <a-sphere color="#17BB4E"
                           position="2 0 0"
                           radius="0.2"
-                          animation="">
+                          animation="property: rotation; from: 0 0 0; to: 0 360 0; dur: 4000; loop: true; easing: linear">
                     <!-- The Moon -->
                     <a-sphere color="#BADCDA"
                               position="0.3 0 0"
@@ -25,13 +25,14 @@
             <!-- EXTRA: The Sun Light Source -->
             <a-light position="0 3 -4"
                      type="ambient"
-                     intensity="1"></a-light>
+                     intensity="1"
+                     animation="property: intensity; from: 1; to: .5; dur: 5000; loop: true; easing: easeInSine; dir: alternate"></a-light>
             <!-- Shooting Star -->
             <a-dodecahedron color="#59FFF5"
                             position="3 3 -2"
                             radius="0.1"
-                            animation__1=""
-                            animation__2="">
+                            animation__1="property: position; to: -10 2 -10; dur: 15000; easing: easeInSine"
+                            animation__2="property: rotation; from: 0 0 0; to: 180 360 -90; dur: 1000; easing: linear; loop: true">
             </a-dodecahedron>
         </a-scene>
     </body>
